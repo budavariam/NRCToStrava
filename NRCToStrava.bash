@@ -70,7 +70,7 @@ for activity_id in ${activity_ids[@]}; do
 
 done
 
-printf "\n+---------------------------------------------+"
-printf "\n|   Uploading NRC converted data to Strava    |"
-printf "\n+---------------------------------------------+\n"
-uploadTCXToStrava
+# printf "\n+---------------------------------------------+"
+# printf "\n|   Uploading NRC converted data to Strava    |"
+# printf "\n+---------------------------------------------+\n"
+# uploadTCXToStrava

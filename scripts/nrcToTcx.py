@@ -77,6 +77,11 @@ def convert(nikePlusActivityID):
 
     if idExists:
         ''' Build TCX Structure '''
+
+        if activityData["app_id"] == "com.garmin.garmin":
+            print("Do not export tcx from garmin exported heartrate data")
+            sys.exit(0)
+
         tcx = Generator(activityData)
 
         ''' Export TCX file '''

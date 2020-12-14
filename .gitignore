@@ -1,5 +1,12 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.pyc
 
 # Settings
 .idea/
+
+.token
+temp/
+venv/
+NRC_activities/
+TCX_exports/
