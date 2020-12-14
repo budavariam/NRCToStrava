@@ -29,11 +29,14 @@ class Generator:
         self.activity = Activity(self.activities, self.data['start_epoch_ms']).activity
 
         """ Prepare values for Lap structure """
-        distanceMeters, calories, structValues = prepareLap(self.data)
+        try:
+            distanceMeters, calories, structValues = prepareLap(self.data)
 
-        """ Create Lap from Activity and summaries values """
-        self.lap = Lap(self.activity, self.data['start_epoch_ms'], self.data['active_duration_ms'],
-                       distanceMeters, calories, structValues)
+            """ Create Lap from Activity and summaries values """
+            self.lap = Lap(self.activity, self.data['start_epoch_ms'], self.data['active_duration_ms'],
+                        distanceMeters, calories, structValues)
+        except Exception as e:
+            print("Failed to get lap data", repr(e))
 
 
 def export(_tcxObject, _startTime, _activityID):
