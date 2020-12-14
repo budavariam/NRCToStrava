@@ -13,6 +13,8 @@ Script to export/convert run activities from Nike Run Club
   bash NRCToStrava.bash $(cat .token)
   ```
 
+- Pretty print xml: `xmllint --format TCX_exports/NikePlus_*.tcx | bat`
+
 ## Requirements
 
 - **Python 3**: All requirements are set in [requirements.txt](https://github.com/opierre/NRCToStrava/tree/master/requirements.txt)
