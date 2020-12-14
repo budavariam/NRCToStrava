@@ -9,7 +9,7 @@ def epochToReadable(epochTime):
 
     finalTimeWithLocalUtc = dt.datetime.fromtimestamp(epochTime / 1000.0)
     utc = pytz.UTC
-    finalTime = finalTimeWithLocalUtc.astimezone(utc)
+    finalTime = utc.localize(finalTimeWithLocalUtc)
     formattedTime = finalTime.strftime('%Y-%m-%dT%H:%M:%SZ')
     return formattedTime
 
